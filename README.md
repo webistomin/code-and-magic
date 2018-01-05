@@ -19,6 +19,6 @@ _`.editorconfig`, `.eslintignore`, `.eslintrc`, `.gitignore`, `.travis.yml`, `Ma
 
 [travis-image]: https://travis-ci.org/webistomin/code-and-magick.svg?branch=master
 [travis-url]: https://travis-ci.org/webistomin/code-and-magick
-[dependency-image]: https://david-dm.org/jwebistomin/code-and-magick.svg?style=flat-square
+[dependency-image]: https://david-dm.org/webistomin/code-and-magick.svg?style=flat-square
 [dependency-url]: https://david-dm.org/webistomin/code-and-magick
 
