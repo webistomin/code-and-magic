@@ -1,0 +1,26 @@
+{
+  "name": "code-and-magick",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Учебный проект «Код и Магия» от HTML Academy",
+  "author": "webistomin",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:webistomin/code-and-magic.git"
+  },
+  "bugs": {
+    "url": "https://github.com/webistomin/code-and-magic/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.2.0",
+    "eslint-config-htmlacademy": "^0.3.2"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "eslint js/"
+  },
+  "engines": {
+    "node": "^6.10"
+  }
+}
