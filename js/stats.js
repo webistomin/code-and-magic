@@ -32,17 +32,17 @@ window.renderStatistics = function (ctx, names, times) {
 
   ctx.fillText('Худшее время: ' + max.toFixed() + 'мс у игрока ' + names[maxIndex], 120, 80);
 
-  var barWidth = 20; // px
-  var indent = 40; // px
+  var barWidth = 50; // px
+  var indent = 100; // px
   var initialX = 120; // px
   var initialY = 100; // px
-  var lineHeight = 15; // px
+  var lineHeight = 20; // px
   var colors = ['red', 'blue', 'green', 'yellow'];
 
   for (i = 0; i < times.length; i++) {
     ctx.fillStyle = colors[i];
     ctx.fillRect(initialX + indent * i, initialY, barWidth, times[i] * step);
     ctx.fillStyle = '#000000';
-    // ctx.fillText(names[i], initialX + histogramWidth + barHeight, initialY + lineHeight + indent * i);
+    ctx.fillText(names[i], initialX + indent * i + 5, initialY + histogramWidth + lineHeight);
   }
 };
