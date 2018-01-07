@@ -37,12 +37,12 @@ window.renderStatistics = function (ctx, names, times) {
   var initialX = 120; // px
   var initialY = 100; // px
   var lineHeight = 20; // px
-  var colors = ['red', 'blue', 'green', 'yellow'];
+  var colors = ['rgba(215, 84, 20, 0.9)', 'rgba(124, 176, 20, 0.9)', 'rgba(124, 176, 157, 0.9)', 'rgba(124, 176, 255, 0.9)'];
 
   for (i = 0; i < times.length; i++) {
     ctx.fillStyle = colors[i];
     ctx.fillRect(initialX + indent * i, initialY, barWidth, times[i] * step);
     ctx.fillStyle = '#000000';
-    ctx.fillText(names[i], initialX + indent * i + 5, initialY + histogramWidth + lineHeight);
+    ctx.fillText(names[i], initialX + indent * i, initialY + histogramWidth + lineHeight);
   }
 };
