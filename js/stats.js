@@ -1,8 +1,8 @@
-//stats.js
+// stats.js
 
 'use strict';
 
-window.renderStatistics = function(ctx, names, times) {
+window.renderStatistics = function (ctx, names, times) {
   ctx.fillStyle = 'white';
   ctx.strokeRect(100, 10, 420, 270);
   ctx.fillRect(100, 10, 420, 270);
@@ -26,13 +26,13 @@ window.renderStatistics = function(ctx, names, times) {
 
   ctx.fillText('Худшее время: ' + max + 'мс у игрока ' + names[maxIndex], 120, 60);
 
-  var barHeight = 20;  //px
-  var indent = 40;     //px
-  var initialX = 120;  //px
-  var initialY = 80;   //px
-  var lineHeight = 15; //px
+  var barHeight = 20; // px
+  var indent = 40; // px
+  var initialX = 120; // px
+  var initialY = 80; // px
+  var lineHeight = 15; // px
 
-  for (var i = 0; i < times.length; i++) {
+  for (i = 0; i < times.length; i++) {
     ctx.fillRect(initialX, initialY + indent * i, times[i] * step, barHeight);
     ctx.fillText(names[i], initialX + histogramWidth + barHeight, initialY + lineHeight + indent * i);
   }
