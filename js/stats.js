@@ -3,10 +3,14 @@
 'use strict';
 
 window.renderStatistics = function (ctx, names, times) {
-  ctx.fillStyle = 'white';
+  ctx.fillRect(110, 20, 420, 270); // тень прямоугольника
+  ctx.fillStyle = 'rgba(0,0,0,0.7)';
+
+  ctx.fillStyle = '#FFFFFF'; // прямоугльник с результатами
   ctx.strokeRect(100, 10, 420, 270);
   ctx.fillRect(100, 10, 420, 270);
-  ctx.fillStyle = '#000000';
+
+  ctx.fillStyle = '#000000'; // текст внутри прямоугольника
   ctx.font = '14px PT Mono';
   ctx.fillText('Ура, вы победили!', 120, 40);
 
@@ -24,7 +28,7 @@ window.renderStatistics = function (ctx, names, times) {
   var histogramWidth = 150;
   var step = histogramWidth / (max - 0);
 
-  ctx.fillText('Худшее время: ' + max + 'мс у игрока ' + names[maxIndex], 120, 60);
+  ctx.fillText('Худшее время: ' + max.toFixed() + 'мс у игрока ' + names[maxIndex], 120, 60);
 
   var barHeight = 20; // px
   var indent = 40; // px
