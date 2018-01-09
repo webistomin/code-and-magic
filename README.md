@@ -18,8 +18,8 @@ _`.editorconfig`, `.eslintignore`, `.eslintrc`, `.gitignore`, `.travis.yml`, `Ma
 
 Репозиторий создан для обучения на интенсивном онлайн-курсе «[Базовый JavaScript](https://htmlacademy.ru/js_intensive)» от [HTML Academy](https://htmlacademy.ru).
 
-[travis-image]: https://travis-ci.org/webistomin/code-and-magic.svg?branch=master
-[travis-url]: https://travis-ci.org/webistomin/code-and-magic
-[dependency-image]: https://david-dm.org/webistomin/code-and-magic.svg?style=flat-square
-[dependency-url]: https://david-dm.org/webistomin/code-and-magic
+[travis-image]: https://travis-ci.org/webistomin/code-and-magick.svg?branch=master
+[travis-url]: https://travis-ci.org/webistomin/code-and-magick
+[dependency-image]: https://david-dm.org/webistomin/code-and-magick.svg?style=flat-square
+[dependency-url]: https://david-dm.org/webistomin/code-and-magick
 
