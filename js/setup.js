@@ -127,10 +127,16 @@ setup.querySelector('.setup-similar').classList.remove('hidden');
 
 var wizardCoat = document.querySelector('.setup-wizard .wizard-coat');
 
-var onClickChangeColor = function () {
+var onClickChangeCoatColor = function () {
   wizardCoat.setAttribute('style', 'fill: ' + COAT_COLOR[Math.floor(Math.random() * COAT_COLOR.length)]);
 };
 
-wizardCoat.addEventListener('click', onClickChangeColor);
+wizardCoat.addEventListener('click', onClickChangeCoatColor);
 
+var wizardEyes = document.querySelector('.setup-wizard .wizard-eyes');
 
+var onClickChangeEyesColor = function () {
+  wizardEyes.setAttribute('style', 'fill: ' + EYES_COLOR[Math.floor(Math.random() * EYES_COLOR.length)]);
+};
+
+wizardEyes.addEventListener('click', onClickChangeEyesColor);
