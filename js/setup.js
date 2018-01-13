@@ -123,3 +123,14 @@ similarListItem.appendChild(fragment);
 
 setup.querySelector('.setup-similar').classList.remove('hidden');
 
+/* Раскрашиваем волшебника по клику */
+
+var wizardCoat = document.querySelector('.setup-wizard .wizard-coat');
+
+var onClickChangeColor = function () {
+  wizardCoat.setAttribute('style', 'fill: ' + COAT_COLOR[Math.floor(Math.random() * COAT_COLOR.length)]);
+};
+
+wizardCoat.addEventListener('click', onClickChangeColor);
+
+
