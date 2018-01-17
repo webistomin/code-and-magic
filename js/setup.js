@@ -68,7 +68,7 @@ var WIZARD_NAMES = ['Иван', 'Хуан Себастьян', 'Мария', 'К
 var WIZARD_SURNAMES = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
 var COAT_COLOR = ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'];
 var EYES_COLOR = ['black', 'red', 'blue', 'yellow', 'green'];
-var FIREBALL_COLOR =['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'];
+var FIREBALL_COLOR = ['#ee4830', '#30a8ee', '#5ce6c0', '#e848d5', '#e6e848'];
 
 document.querySelector('.setup-similar').classList.remove('hidden');
 
@@ -162,15 +162,35 @@ dialogHandle.addEventListener('mousedown', function (evt) {
     y: evt.clientY
   };
 
-  var onMouseMove = function () {
+  var onMouseMove = function (moveEvt) {
     moveEvt.preventDefault();
-
     var shift = {
       x: startCoords.x - moveEvt.clientX,
-      y: startCoords.y 
+      y: startCoords.y - moveEvt.clientY
+    };
+
+    startCoords = {
+      x: moveEvt.clientX,
+      y: moveEvt.clientY
+    };
+
+    if (moveEvt.clientY < 0 || moveEvt.clientY > window.innerHeight) {
+      setup.style.top = 0 + 'px';
+    } else {
+      setup.style.top = (setup.offsetTop - shift.y) + 'px';
+      setup.style.left = (setup.offsetLeft - shift.x) + 'px';
     }
+  };
+
+  var onMouseUp = function (upEvt) {
+    upEvt.preventDefault();
+
+    document.removeEventListener('mousemove', onMouseMove);
+    document.removeEventListener('mouseup', onMouseUp);
   };
 
   document.addEventListener('mousemove', onMouseMove);
   document.addEventListener('mouseup', onMouseUp);
 });
+
+
