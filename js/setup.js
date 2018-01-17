@@ -149,3 +149,28 @@ var onClickChangeFireballColor = function () {
 };
 
 wizardFireball.addEventListener('click', onClickChangeFireballColor);
+
+/* Реализуем драг-н-дроп */
+
+var dialogHandle = setup.querySelector('.setup-user-pic');
+
+dialogHandle.addEventListener('mousedown', function (evt) {
+  evt.preventDefault();
+
+  var startCoords = {
+    x: evt.clientX,
+    y: evt.clientY
+  };
+
+  var onMouseMove = function () {
+    moveEvt.preventDefault();
+
+    var shift = {
+      x: startCoords.x - moveEvt.clientX,
+      y: startCoords.y 
+    }
+  };
+
+  document.addEventListener('mousemove', onMouseMove);
+  document.addEventListener('mouseup', onMouseUp);
+});
