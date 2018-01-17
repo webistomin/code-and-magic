@@ -193,4 +193,37 @@ dialogHandle.addEventListener('mousedown', function (evt) {
   document.addEventListener('mouseup', onMouseUp);
 });
 
+/* Перетаскиваем артефакты */
 
+var shopElement = document.querySelector('.setup-artifacts-shop');
+var draggedItem = null;
+
+shopElement.addEventListener('dragstart', function (evt) {
+  if (evt.target.tagName.toLowerCase() === 'img') {
+    draggedItem = evt.target;
+    evt.dataTransfer.setData('text/plain', evt.target.alt);
+  }
+});
+
+var artifactElements = document.querySelector('.setup-artifacts');
+
+artifactElements.addEventListener('dragover', function (evt) {
+  evt.preventDefault();
+  return false;
+});
+
+artifactElements.addEventListener('drop', function (evt) {
+  evt.target.style = '';
+  evt.target.appendChild(draggedItem);
+  evt.preventDefault();
+});
+
+artifactElements.addEventListener('dragenter', function (evt) {
+  evt.target.style.backgroundColor = 'yellow';
+  evt.preventDefault();
+});
+
+artifactElements.addEventListener('dragleave', function (evt) {
+  evt.target.style.backgroundColor = '';
+  evt.preventDefault();
+});

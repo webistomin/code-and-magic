@@ -37,7 +37,6 @@ window.renderStatistics = function (ctx, names, times) {
   var initialX = 120; // px
   var initialY = 100; // px
   var lineHeight = 20; // px
-
   for (i = 0; i < times.length; i++) {
     if (names[i] === 'Вы') {
       ctx.fillStyle = 'rgba(255, 0, 0, 1)';
