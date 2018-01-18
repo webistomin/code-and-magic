@@ -6,10 +6,10 @@
   "author": "webistomin",
   "repository": {
     "type": "git",
-    "url": "git@github.com:webistomin/code-and-magic.git"
+    "url": "git@github.com:webistomin/code-and-magick.git"
   },
   "bugs": {
-    "url": "https://github.com/webistomin/code-and-magic/issues"
+    "url": "https://github.com/webistomin/code-and-magick/issues"
   },
   "license": "MIT",
   "devDependencies": {
